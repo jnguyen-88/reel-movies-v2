@@ -1,0 +1,222 @@
+/* Base CSS */
+html,
+body,
+* {
+    font-family: 'Roboto', sans-serif;
+    color: var(--white);
+}
+
+html,
+body {
+    background: rgb(15,1,36);
+    background: linear-gradient(30deg, rgba(15,1,36,0.9752275910364145) 3%, rgba(6,14,55,1) 40%) cover no-repeat;
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Global Variables */
+:root {
+    --white:#ecebeb;
+    --color-main:#e60ba1;
+}
+
+/* ==========
+Navigation
+=============*/
+.navbar {
+    background: transparent;
+}
+
+.navbar > *,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link {
+    color: var(--white);
+    transition: .2s;
+}
+
+.nav-item {
+    margin-right: 2.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: var(--color-main);
+}
+
+/* ==========
+Top
+=============*/
+/* Header */
+h1 {
+    color: var(--color-main);
+    font-size: 6rem;
+}
+
+.hero {
+    position: absolute;
+    color: var(--color-main);
+    bottom: 4rem;
+    left: 5rem;
+    z-index: 100;
+}
+
+.hero p {
+    font-size: 2rem;
+}
+
+/* ==========
+Mid
+=============*/
+
+/* Main-Mid */
+.main-mid {
+    display: flex;
+}
+
+/* PopMovies */
+.section-popular {
+    flex: 0 0 45%;
+}
+
+.popMovies {
+    position: relative;
+    padding: .5rem;
+}
+
+.popMovies-text {
+    position: absolute;
+    top: 55%;
+    left: 4%;
+    z-index: 1;
+
+    padding: 0 .5rem;
+    color: var(--white);
+}
+
+.popMovies-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 90%;
+}
+
+.movie-img {
+    border-radius: 5px;
+    width: 100%;
+    opacity: 0.5;
+    transition: .2s;
+}
+
+.popMovies:hover > .movie-img {
+    opacity: .8;
+}
+
+/* ==========
+Footer
+=============*/
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+}
+
+.footer-sm {
+    display: flex;
+
+    margin-bottom: .75rem;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: .75rem;
+}
+
+.footer-right {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fontawesome */
+.fab {
+    font-size: 16px;
+    margin-right: 1rem;
+}
+/* Carousel */
+#carouselExampleFade,
+.carousel {
+    position: relative;
+    background-color: #000;
+}
+.carousel-inner {
+    max-height: 70vh;
+}
+.carousel-item img {
+    opacity:.65;
+}
+.carousel-item {
+    transition: transform 3.3s ease-in-out, opacity .5s ease-out
+}
+
+/* Slick */
+.slick-item-box {
+    max-width: 154px; 
+}
+
+.container > * {
+    margin: 1.5em;
+    padding: .75em;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+.slick-slide img {
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+hr { 
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent,#666, transparent);
+}
+
+/* Button */
+.btn {
+    font-size: 1.35rem;
+    font-weight: 300;
+    padding:0 45px;
+    line-height: 40px;
+    border-radius: 20px;
+	height: auto;
+    color: var(--white);
+    background-color: var(--color-main);
+    transition: .25s
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: var(--color-main);
+    color: var(--white)
+}
