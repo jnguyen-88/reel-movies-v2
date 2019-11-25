@@ -31,7 +31,12 @@ body {
 Navigation
 =============*/
 .navbar {
-    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fas .fa-film {
+    margin-right: 0;
 }
 
 .navbar > *,
@@ -39,6 +44,37 @@ Navigation
 .navbar-light .navbar-nav .nav-link {
     color: var(--white);
     transition: .2s;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+}
+
+.search-input{
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    box-sizing: border-box;
+    color: black;
+    width: 300px;
+    display: inline-block;
+}
+
+.search-submit {
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+    box-sizing: border-box;
+    outline: none;
+    width: 125px;
+    background-color: var(--color-main);
+    transition: .25s;
+}
+
+.search-submit:hover {
+    background-color: #b90b84;
 }
 
 .nav-item {
@@ -86,7 +122,7 @@ Mid
 
 .popMovies {
     position: relative;
-    padding: .5rem;
+    padding: 0 .5rem;
 }
 
 .popMovies-text {
@@ -115,6 +151,29 @@ Mid
 
 .popMovies:hover > .movie-img {
     opacity: .8;
+}
+
+.section-popular {
+    padding: .5rem 0;
+}
+
+.section-review {
+    display: flex;
+    flex-direction: column;
+
+    padding: .5rem 0;
+}
+
+.do {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.img-img {
+    -webkit-mask-image:gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 /* ==========

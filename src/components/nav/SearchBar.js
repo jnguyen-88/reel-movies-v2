@@ -3,10 +3,14 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   render() {
     return (
-      <div className='ui icon input'>
-        <input type='text' placeholder='Search...' />
-        <i className='search icon'></i>
-      </div>
+      <form action='#' class='search'>
+        <input
+          type='text'
+          className='search-input'
+          placeholder='Search movie title'
+        />
+        <input type='submit' className='search-submit' value='Search' />
+      </form>
     );
   }
 }

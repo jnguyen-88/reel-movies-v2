@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Popular from './Popular';
+import UserReviewBox from './UserReviewBox';
 
 class Middle extends Component {
   render() {
@@ -9,7 +10,11 @@ class Middle extends Component {
           <Popular />
         </section>
         <section className='section-review'>
-          <div>Some reviews over here</div>
+          <h3>Latest Reviews</h3>
+          <div className='do'>
+            <UserReviewBox />
+            <UserReviewBox />
+          </div>
         </section>
       </div>
     );
