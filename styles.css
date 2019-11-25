@@ -19,6 +19,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    letter-spacing: .75px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+h5 {
+    font-size: .85rem;
 }
 
 /* Global Variables */
@@ -32,7 +42,7 @@ Navigation
 =============*/
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .fas .fa-film {
@@ -49,13 +59,16 @@ Navigation
 
 form {
     display: flex;
+
+    width: 90%;
+    margin: 0 auto;
 }
 
 .search-input{
-    height: 50px;
+    height: 40px;
     border: none;
     outline: none;
-    padding: 0 25px;
+    padding: 0 18px;
     border-radius: 25px 0 0 25px;
     box-sizing: border-box;
     color: black;
@@ -64,8 +77,9 @@ form {
 }
 
 .search-submit {
-    height: 50px;
+    height: 40px;
     border-radius: 0 25px 25px 0;
+    border: none;
     box-sizing: border-box;
     outline: none;
     width: 125px;
@@ -77,12 +91,13 @@ form {
     background-color: #b90b84;
 }
 
-.nav-item {
-    margin-right: 2.5rem;
-}
-
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
     color: var(--color-main);
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
 }
 
 /* ==========
@@ -91,19 +106,19 @@ Top
 /* Header */
 h1 {
     color: var(--color-main);
-    font-size: 6rem;
+    font-size: 1rem;
 }
 
 .hero {
     position: absolute;
     color: var(--color-main);
-    bottom: 4rem;
-    left: 5rem;
+    bottom: 2.35rem;
+    left: 2rem;
     z-index: 100;
 }
 
 .hero p {
-    font-size: 2rem;
+    font-size: .80rem;
 }
 
 /* ==========
@@ -113,6 +128,7 @@ Mid
 /* Main-Mid */
 .main-mid {
     display: flex;
+    flex-direction: column;
 }
 
 /* PopMovies */
@@ -125,9 +141,13 @@ Mid
     padding: 0 .5rem;
 }
 
+.popMovies h4 {
+    font-size: 1.20rem;
+}
+
 .popMovies-text {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 4%;
     z-index: 1;
 
@@ -137,7 +157,7 @@ Mid
 
 .popMovies-text p {
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
+    font-size: .80rem;
     font-weight: 300;
     width: 90%;
 }
@@ -172,23 +192,33 @@ Mid
 }
 
 .img-img {
-    -webkit-mask-image:gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: linear-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 /* ==========
 Footer
 =============*/
+
+
 .footer-box {
+    padding: .75rem .85rem;
+}
+
+.moviedb-box {
     display: flex;
-    justify-content: space-around;
-    padding: 3rem 0;
+    justify-content: center;
 }
 
 .footer-sm {
     display: flex;
+    justify-content: space-around;
 
-    margin-bottom: .75rem;
+    margin: .75rem 0;
+}
+
+.footer-right span {
+    text-align: center;
 }
 
 .footer-left {
@@ -204,6 +234,7 @@ Footer
     justify-content: space-between;
 
     margin-bottom: .75rem;
+    font-size: .85rem;
 }
 
 .footer-right {
@@ -253,6 +284,7 @@ Footer
     margin: auto;
     margin-bottom: 5px;
     border-radius: 2px;
+    width: 90%;
 }
 
 hr { 
@@ -261,11 +293,17 @@ hr {
     background-image: linear-gradient(to right, transparent,#666, transparent);
 }
 
+.genre-text {
+    font-size: .80rem;
+}
+
 /* Button */
 .btn {
-    font-size: 1.35rem;
+    /* font-size: 1.35rem; */
+    font-size: 1rem;
     font-weight: 300;
-    padding:0 45px;
+    /* padding:0 45px; */
+    padding: 0 20px;
     line-height: 40px;
     border-radius: 20px;
 	height: auto;
@@ -278,4 +316,153 @@ hr {
     background-color: transparent;
     border-color: var(--color-main);
     color: var(--white)
+}
+
+  /*============
+      560px Media
+  ============*/
+
+  @media (min-width: 560px) {
+      form {
+          width: 80%;
+      }
+
+      h1 {
+          font-size: 1.75rem;
+      }
+
+      .hero p {
+          font-size: 1.25rem
+      }
+
+      .popMovies-text {
+          top: 63%
+      }
+
+      .popMovies-text p {
+          font-size: .95rem;
+      }
+
+      h3 {
+          text-align: left;
+      }
+
+      h5 {
+          font-size: 1.15rem;
+      }
+
+      .heading-ter {
+          text-align: center;
+      }
+  }
+
+    /*============
+      760px Media
+  ============*/
+
+  @media (min-width: 760px) {
+    .navbar-nav {
+        width: auto;
+    }
+
+    form {
+        width: auto;
+    }
+
+    .btn {
+        font-size: 1.15rem;
+        padding: 0 25px;
+    }
+
+    .footer-contact {
+        font-size: 1rem;
+    }
+
+    .footer-right span {
+        font-size: 15px;
+    }
+  }
+
+/*============
+1024px Media
+============*/
+@media (min-width: 1024px) {
+    .hero {
+    bottom: 6rem;
+    left: 5rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    .hero p {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1.35rem;
+        padding: 0 45px;
+    }
+
+    .main-mid {
+        flex-direction: row;
+    }
+
+    .popMovies-text {
+        top: 58%;
+    }
+
+    .heading-ter {
+        text-align: right;
+        margin-right: 12px;
+    }
+
+    .genre-text {
+        font-size: .90rem;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .search-input {
+        height: 50px;
+        padding: 0 25px;
+    }
+
+    .search-submit {
+        height: 50px;
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 2.5rem;
+    }
+
+    .footer-box {
+        display: flex;
+        justify-content: space-around;
+        padding: 3rem 0;
+    }
+    
+    .moviedb-box {
+        justify-content: flex-start;
+    }
+    
+    .footer-sm {
+        margin: .75rem 0;
+        display: block;
+    }
+
+    .footer-sm i {
+        font-size: 1.15rem;
+    }
+
+    .footer-contact {
+        font-size: 1.15rem;
+    }
+
+    .footer-right span {
+        text-align: left;
+    }
 }

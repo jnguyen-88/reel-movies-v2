@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0cc15c94e21d72f2de91535806987319",
+    "revision": "bc4f074a21445b95eb75eb0b60383b08",
     "url": "/reel-movies-v2/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reel-movies-v2/static/js/2.b6b817e9.chunk.js"
   },
   {
-    "revision": "e7eb6babf304f55a6520",
-    "url": "/reel-movies-v2/static/js/main.4a0fb6cc.chunk.js"
+    "revision": "1347dd1dcea741b74d8a",
+    "url": "/reel-movies-v2/static/js/main.c66b37cc.chunk.js"
   },
   {
     "revision": "86f69e5c2eeb25b9f565",
