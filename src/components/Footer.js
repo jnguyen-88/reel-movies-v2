@@ -12,7 +12,7 @@ const Footer = () => {
               <a>Contact Us</a>
               <a>Press</a>
             </div>
-            <div style={{ display: 'flex' }}>
+            <div className='moviedb-box'>
               <img
                 style={{ width: '30%' }}
                 src='https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png'
@@ -27,7 +27,7 @@ const Footer = () => {
             <i className='fab fa-google-plus-g'></i>
             <i className='fab fa-instagram'></i>
           </div>
-          <span style={{ fontWeight: '300', fontSize: '13px' }}>
+          <span style={{ fontWeight: '300' }}>
             &copy; This webpage was designed by Justin Nguyen and built with{' '}
             <i style={{ color: 'red' }} className='fas fa-heart'></i> in
             Sacramento, CA.

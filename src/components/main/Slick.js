@@ -14,7 +14,37 @@ class Slick extends Component {
     var settings = {
       dots: false,
       slidesToShow: 6,
-      slidesToScroll: 5
+      slidesToScroll: 5,
+      responsive: [
+        {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 765,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 350,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
 
     const slick = this.props.movies.map((movie, index) => {

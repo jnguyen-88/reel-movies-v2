@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class SlickItem extends Component {
-  // TODO: get array of Genres from movieDB, match genreId to get value from array
-
+  // Function to find Genre name
   genre = id => {
+    // Filter item by id by matching it to the item'sID and return the 'name'
+    // genres = [{id, name}, {id, name}]
     return this.props.genres.filter(item => {
       return item.id === id;
     })[0].name;
@@ -14,8 +15,8 @@ class SlickItem extends Component {
     return (
       <div className='slick-item-box'>
         <img src={`https://image.tmdb.org/t/p/w154${this.props.image}`} />
-        <h5 style={{ fontSize: '1rem' }}>{this.props.title}</h5>
-        <p>{this.genre(this.props.genreId)}</p>
+        <h5>{this.props.title}</h5>
+        <p className='genre-text'>{this.genre(this.props.genreId)}</p>
       </div>
     );
   }

@@ -10,7 +10,7 @@ class Middle extends Component {
           <Popular />
         </section>
         <section className='section-review'>
-          <h3>Latest Reviews</h3>
+          <h3 className='heading-ter'>Latest Reviews</h3>
           <div className='do'>
             <UserReviewBox />
             <UserReviewBox />
