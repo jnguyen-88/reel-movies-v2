@@ -1,4 +1,5 @@
 import moviedb from '../api/moviedb';
+import history from '../history';
 
 const myapikey = process.env.REACT_APP_API_KEY;
 
@@ -10,9 +11,20 @@ export const fetchPopMovies = () => async dispatch => {
   dispatch({ type: 'FETCH_POP_MOVIES', payload: response.data.results });
 };
 
+export const fetchUpcomingMovies = () => async dispatch => {
+  const response = await moviedb.get(
+    `/movie/upcoming?api_key=${myapikey}&language=en-US&page=1`
+  );
+
+  dispatch({
+    type: 'FETCH_UPCOMING_MOVIES',
+    payload: response.data.results
+  });
+};
+
 export const fetchNowPlayingMovies = () => async dispatch => {
   const response = await moviedb.get(
-    `/movie/now_playing?api_key=${myapikey}&language=en-US&page=1`
+    `movie/now_playing?api_key=${myapikey}&language=en-US&page=1`
   );
 
   dispatch({
@@ -21,13 +33,34 @@ export const fetchNowPlayingMovies = () => async dispatch => {
   });
 };
 
-export const fetchUpcomingMovies = () => async dispatch => {
+export const fetchMovie = id => {
+  return async dispatch => {
+    const response = await moviedb.get(
+      `/movie/${id}?api_key=${myapikey}&language=en-US`
+    );
+    dispatch({ type: 'FETCH_MOVIE', payload: response.data });
+
+    history.push(`/movies/${id}`);
+  };
+};
+
+export const fetchCast = id => async dispatch => {
+  const response = await moviedb.get(`movie/${id}/credits?api_key=${myapikey}`);
+
+  dispatch({
+    type: 'FETCH_CAST',
+    payload: response.data.cast
+  });
+};
+
+export const fetchRecommendations = () => async dispatch => {
   const response = await moviedb.get(
-    `/movie/upcoming?api_key=${myapikey}&language=en-US&page=1`
+    // 550 = movieId
+    `/movie/550/recommendations?api_key=369ab6a13a497677f3e99e9c51172547&language=en-US&page=1`
   );
 
   dispatch({
-    type: 'FETCH_UPCOMING_MOVIES',
+    type: 'FETCH_RECOMMENDATIONS',
     payload: response.data.results
   });
 };

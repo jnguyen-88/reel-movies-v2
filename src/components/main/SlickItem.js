@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { fetchMovie } from '../../actions';
+
 class SlickItem extends Component {
   // Function to find Genre name
   genre = id => {
@@ -11,10 +13,18 @@ class SlickItem extends Component {
     })[0].name;
   };
 
+  handleId = e => {
+    let movieId = this.props.movieId;
+    this.props.fetchMovie(movieId);
+  };
+
   render() {
     return (
-      <div className='slick-item-box'>
-        <img src={`https://image.tmdb.org/t/p/w154${this.props.image}`} />
+      <div className='slick-item-box' onClick={this.handleId}>
+        <img
+          src={`https://image.tmdb.org/t/p/w154${this.props.image}`}
+          alt={this.props.title}
+        />
         <h5>{this.props.title}</h5>
         <p className='genre-text'>{this.genre(this.props.genreId)}</p>
       </div>
@@ -26,4 +36,4 @@ const mapStateToProps = state => ({
   genres: state.movies.listOfGenres
 });
 
-export default connect(mapStateToProps)(SlickItem);
+export default connect(mapStateToProps, { fetchMovie })(SlickItem);

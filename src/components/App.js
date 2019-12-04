@@ -1,23 +1,28 @@
 import React from 'react';
+import { Router, Route } from 'react-router-dom';
 
 import NavBar from './nav/NavBar';
-import Header from './Header';
-import Middle from './main/Middle';
-import Bottom from './main/Bottom';
-import Footer from './Footer';
+import Landing from './main/Landing';
+import MovieDetail from './details/MovieDetail';
 
-function App() {
-  return (
-    <div>
-      <NavBar />
-      <Header />
-      <main>
-        <Middle />
-        <Bottom />
-      </main>
-      <Footer />
-    </div>
-  );
+import history from '../history';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <NavBar />
+        <Router history={history}>
+          <Route exact path='/' component={Landing} />
+          <Route
+            exact
+            path='/movies/:id'
+            render={({ match }) => <MovieDetail key={match.params.id} />}
+          />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -7,6 +7,7 @@ class UserReviewBox extends Component {
         <img
           src='https://image.tmdb.org/t/p/original/cCVsewbQIdR8LsY3EGZNlpbiqK9.jpg'
           className='movie-img img-img'
+          alt='The mando'
         />
         <div className='popMovies-text'>
           <h4>The Mandalorian (2019)</h4>

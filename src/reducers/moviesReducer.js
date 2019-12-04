@@ -3,7 +3,10 @@ const initialState = {
   popMoviesArr: [],
   nowPlayingMoviesArr: [],
   upcomingMoviesArr: [],
-  listOfGenres: []
+  listOfGenres: [],
+  cast: [],
+  recommendedMovies: [],
+  movieDetail: []
 };
 
 export default (state = initialState, action) => {
@@ -16,6 +19,12 @@ export default (state = initialState, action) => {
       return { ...state, upcomingMoviesArr: action.payload };
     case 'GET_GENRES':
       return { ...state, listOfGenres: action.payload };
+    case 'FETCH_CAST':
+      return { ...state, cast: action.payload };
+    case 'FETCH_RECOMMENDATIONS':
+      return { ...state, recommendedMovies: action.payload };
+    case 'FETCH_MOVIE':
+      return { ...state, movieDetail: action.payload };
     default:
       return state;
   }
