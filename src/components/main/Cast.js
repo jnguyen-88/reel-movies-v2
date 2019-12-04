@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { fetchCast } from '../../actions';
 
 class Cast extends Component {
-  static getDerivedStateFromProps(props, state) {}
-
   render() {
     return this.props.cast.slice(0, 5).map(cast => {
       return (
