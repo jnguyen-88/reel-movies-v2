@@ -72,10 +72,12 @@ class MovieDetail extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   selectedMovie: state.movies.movieDetail,
   cast: state.movies.cast
 });
+
+// state.movies.movieDetail,
 
 export default withRouter(
   connect(mapStateToProps, { fetchCast, fetchMovie })(MovieDetail)
