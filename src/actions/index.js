@@ -40,7 +40,7 @@ export const fetchMovie = id => {
     );
     dispatch({ type: 'FETCH_MOVIE', payload: response.data });
 
-    history.push(`/movies/${id}`);
+    history.push(`/${id}`);
   };
 };
 
