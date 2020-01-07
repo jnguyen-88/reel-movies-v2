@@ -53,10 +53,10 @@ export const fetchCast = id => async dispatch => {
   });
 };
 
-export const fetchRecommendations = () => async dispatch => {
+export const fetchRecommendations = movieId => async dispatch => {
   const response = await moviedb.get(
     // 550 = movieId
-    `/movie/550/recommendations?api_key=369ab6a13a497677f3e99e9c51172547&language=en-US&page=1`
+    `/movie/${movieId}/recommendations?api_key=${myapikey}&language=en-US&page=1`
   );
 
   dispatch({

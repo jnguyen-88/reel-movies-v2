@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { fetchMovie, fetchCast } from '../../actions';
+import { fetchMovie, fetchCast, fetchRecommendations } from '../../actions';
 import Cast from '../main/Cast';
 import Footer from '../Footer';
 import Recommended from '../main/Recommended';
@@ -12,6 +12,7 @@ class MovieDetail extends Component {
   componentDidMount() {
     this.props.fetchMovie(this.props.match.params.id);
     this.props.fetchCast(this.props.match.params.id);
+    this.props.fetchRecommendations(this.props.match.params.id);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,10 +42,15 @@ class MovieDetail extends Component {
             <div className='movieDetail-box'>
               <h1>{this.props.selectedMovie.original_title}</h1>
               <div className='movieDetail-ratings-box'>
-                <div className='box db-movie'>8.4</div>
+                <div className='box db-movie'>
+                  {this.props.selectedMovie.vote_average}
+                </div>
                 <div className='box db-reel'>9.3</div>
               </div>
-              <div>Runtime: 94mins | Release Date: 2002-07-26</div>
+              <div>
+                Runtime: {this.props.selectedMovie.runtime} mins. | Release
+                Date: {this.props.selectedMovie.release_date}
+              </div>
               <br></br>
               <p className='p-detail'>{this.props.selectedMovie.overview}</p>
               <hr className='style14'></hr>
@@ -78,5 +84,7 @@ const mapStateToProps = state => ({
 });
 
 export default withRouter(
-  connect(mapStateToProps, { fetchCast, fetchMovie })(MovieDetail)
+  connect(mapStateToProps, { fetchCast, fetchMovie, fetchRecommendations })(
+    MovieDetail
+  )
 );

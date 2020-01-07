@@ -5,10 +5,6 @@ import { fetchRecommendations } from '../../actions';
 import Slick from './Slick';
 
 class Recommendations extends Component {
-  componentDidMount() {
-    this.props.fetchRecommendations();
-  }
-
   render() {
     return (
       <Slick sectionName='Recommendations' movies={this.props.recommended} />
