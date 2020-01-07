@@ -141,6 +141,10 @@ Mid
     padding: 0 .5rem;
 }
 
+.popMovies:hover {
+    cursor: pointer;
+}
+
 .popMovies h4 {
     font-size: 1.20rem;
 }
@@ -268,6 +272,10 @@ Footer
 /* Slick */
 .slick-item-box {
     max-width: 154px; 
+}
+
+.slick-item-box:hover {
+    cursor: pointer;
 }
 
 .container > * {
