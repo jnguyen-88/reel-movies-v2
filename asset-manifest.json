@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.js": "/reel-movies-v2/static/js/main.169e90a2.chunk.js",
-    "main.js.map": "/reel-movies-v2/static/js/main.169e90a2.chunk.js.map",
+    "main.css": "/reel-movies-v2/static/css/main.f80e6d9c.chunk.css",
+    "main.js": "/reel-movies-v2/static/js/main.eb6718d9.chunk.js",
+    "main.js.map": "/reel-movies-v2/static/js/main.eb6718d9.chunk.js.map",
     "runtime-main.js": "/reel-movies-v2/static/js/runtime-main.de5583f4.js",
     "runtime-main.js.map": "/reel-movies-v2/static/js/runtime-main.de5583f4.js.map",
-    "static/js/2.39493388.chunk.js": "/reel-movies-v2/static/js/2.39493388.chunk.js",
-    "static/js/2.39493388.chunk.js.map": "/reel-movies-v2/static/js/2.39493388.chunk.js.map",
+    "static/js/2.735ea0f3.chunk.js": "/reel-movies-v2/static/js/2.735ea0f3.chunk.js",
+    "static/js/2.735ea0f3.chunk.js.map": "/reel-movies-v2/static/js/2.735ea0f3.chunk.js.map",
     "index.html": "/reel-movies-v2/index.html",
-    "precache-manifest.21f743f0fa29d3b13b6b6019a59a7b1e.js": "/reel-movies-v2/precache-manifest.21f743f0fa29d3b13b6b6019a59a7b1e.js",
-    "service-worker.js": "/reel-movies-v2/service-worker.js"
+    "precache-manifest.15a565c430669f9b1b5cd14d6c86929e.js": "/reel-movies-v2/precache-manifest.15a565c430669f9b1b5cd14d6c86929e.js",
+    "service-worker.js": "/reel-movies-v2/service-worker.js",
+    "static/css/main.f80e6d9c.chunk.css.map": "/reel-movies-v2/static/css/main.f80e6d9c.chunk.css.map",
+    "static/media/AuthPage.css": "/reel-movies-v2/static/media/cinema.0fbb8eaa.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.de5583f4.js",
-    "static/js/2.39493388.chunk.js",
-    "static/js/main.169e90a2.chunk.js"
+    "static/js/2.735ea0f3.chunk.js",
+    "static/css/main.f80e6d9c.chunk.css",
+    "static/js/main.eb6718d9.chunk.js"
   ]
 }
