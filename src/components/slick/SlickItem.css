@@ -1,0 +1,34 @@
+.slick-item-box {
+    max-width: 154px; 
+}
+
+.slick-item-box:hover {
+    cursor: pointer;
+}
+
+.genre-text {
+    font-size: .80rem;
+}
+
+.container > * {
+    margin: 1.5em;
+    padding: .75em;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slick-slide img {
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    width: 90%;
+}
+
+@media (min-width: 1024px) {
+    .genre-text {
+        font-size: .90rem;
+    }
+}

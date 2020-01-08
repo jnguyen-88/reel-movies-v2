@@ -1,0 +1,89 @@
+/* Fontawesome */
+.fab {
+    font-size: 16px;
+    margin-right: 1rem;
+}
+
+.footer-box {
+    padding: .75rem .85rem;
+}
+
+.moviedb-box {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-sm {
+    display: flex;
+    justify-content: space-around;
+
+    margin: .75rem 0;
+}
+
+.footer-right span {
+    text-align: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: .75rem;
+    font-size: .85rem;
+}
+
+.footer-right {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 760px) {
+
+    .footer-contact {
+        font-size: 1rem;
+    }
+
+    .footer-right span {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-box {
+        display: flex;
+        justify-content: space-around;
+        padding: 3rem 0;
+    }
+    
+    .moviedb-box {
+        justify-content: flex-start;
+    }
+    
+    .footer-sm {
+        margin: .75rem 0;
+        display: block;
+    }
+
+    .footer-sm i {
+        font-size: 1.15rem;
+    }
+
+    .footer-contact {
+        font-size: 1.15rem;
+    }
+
+    .footer-right span {
+        text-align: left;
+    }
+}

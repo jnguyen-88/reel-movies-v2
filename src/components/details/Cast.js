@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import './Cast.css';
+
 class Cast extends Component {
   render() {
     return this.props.cast.slice(0, 5).map(cast => {

@@ -1,0 +1,37 @@
+.movieDetail-ratings-box {
+    display: flex;
+
+    margin-bottom: 1rem;
+}
+
+.wrapper {
+    position: fixed;
+}
+.p-detail {
+    width: 65%;
+}
+
+.movieDetail-box {
+    padding-left: 2.5rem;
+}
+
+.movieDetail-wrapper {
+    width: 100%;
+    max-width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.039653361344537785) 1%, rgba(0,0,0,0.6418942577030813) 24%, rgba(3,3,3,0.9640231092436975) 54%);
+}
+
+.db-movie {
+    margin-right: 1.5rem;
+    background-color: #66ca6f;
+}
+
+.db-reel {
+    background-color:var(--color-main) ;
+}
+
+.box {
+    padding: 1rem;
+    border-radius: 5px;
+}

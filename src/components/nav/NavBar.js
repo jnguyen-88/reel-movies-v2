@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import SearchBar from './SearchBar';
+import './NavBar.css';
 
 class NavBar extends Component {
   render() {
@@ -28,7 +29,7 @@ class NavBar extends Component {
             </a>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/reel-movies-v2'>
+            <a className='nav-link' href='/reel-movies-v2/login'>
               Login
             </a>
           </li>

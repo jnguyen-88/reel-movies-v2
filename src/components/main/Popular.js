@@ -9,10 +9,6 @@ class Popular extends Component {
     this.props.fetchPopMovies();
   }
 
-  handleId = e => {
-    let movieId = this.props.movieId;
-  };
-
   render() {
     const popular = this.props.popMovies.slice(0, 3).map((movie, index) => {
       return (
@@ -22,8 +18,8 @@ class Popular extends Component {
           image={movie.backdrop_path}
           title={movie.original_title}
           genreId={movie.genre_ids[0]}
-          movieId={movie.id}
           overview={movie.overview}
+          movieId={movie.id}
         />
       );
     });

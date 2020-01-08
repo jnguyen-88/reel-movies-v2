@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchRecommendations } from '../../actions';
-import Slick from './Slick';
+import Slick from '../slick/Slick';
 
 class Recommendations extends Component {
   render() {

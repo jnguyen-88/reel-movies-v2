@@ -1,10 +1,12 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 
 import NavBar from './nav/NavBar';
 import Landing from './main/Landing';
+import AuthPage from './auth/AuthPage';
 import MovieDetail from './details/MovieDetail';
 import history from '../history';
+import './App.css';
 
 class App extends React.Component {
   render() {
@@ -12,11 +14,14 @@ class App extends React.Component {
       <div>
         <Router history={history}>
           <NavBar />
-          <Route exact path='/' component={Landing} />
-          <Route
-            path='/:id'
-            render={({ match }) => <MovieDetail key={match.params.id} />}
-          />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/login' component={AuthPage} />
+            <Route
+              path='/:id'
+              render={({ match }) => <MovieDetail key={match.params.id} />}
+            />
+          </Switch>
         </Router>
       </div>
     );

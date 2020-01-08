@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { fetchMovie, fetchCast, fetchRecommendations } from '../../actions';
-import Cast from '../main/Cast';
+import Cast from './Cast';
 import Footer from '../Footer';
-import Recommended from '../main/Recommended';
+import Recommended from './Recommended';
+import './MovieDetail.css';
 
 class MovieDetail extends Component {
   componentDidMount() {

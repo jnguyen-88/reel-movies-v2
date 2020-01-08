@@ -1,0 +1,17 @@
+.cast-actor {
+    font-size: 18px;
+    margin: 0;
+}
+
+.cast-character {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.cast-wrapper {
+    display: flex;
+}
+
+.cast-wrapper > .cast-box:not(:last-of-type) {
+    margin-right: 12px;
+}

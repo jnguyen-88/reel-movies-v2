@@ -45,7 +45,6 @@ class Slick extends Component {
           }
         }
       ]
-  
     };
 
     const slick = this.props.movies.map((movie, index) => {

@@ -1,0 +1,58 @@
+h1 {
+    color: var(--color-main);
+    font-size: 1rem;
+}
+
+.hero {
+    position: absolute;
+    color: var(--color-main);
+    bottom: 2.35rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+.hero p {
+    font-size: .80rem;
+}
+
+/* Carousel */
+#carouselExampleFade,
+.carousel {
+    position: relative;
+    background-color: #000;
+}
+.carousel-inner {
+    max-height: 70vh;
+}
+.carousel-item img {
+    opacity:.65;
+}
+.carousel-item {
+    transition: transform 3.3s ease-in-out, opacity .5s ease-out
+}
+
+@media (min-width: 560px) {
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+    bottom: 6rem;
+    left: 5rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    .hero p {
+        font-size: 2rem;
+    }
+}

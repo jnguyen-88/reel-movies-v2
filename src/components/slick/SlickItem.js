@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMovie } from '../../actions';
+import './SlickItem.css';
 
 class SlickItem extends Component {
   // Function to find Genre name

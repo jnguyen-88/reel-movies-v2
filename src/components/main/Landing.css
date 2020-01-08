@@ -1,0 +1,35 @@
+.main-mid {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-popular {
+    flex: 0 0 45%;
+    padding: .5rem 0;
+}
+
+.section-review {
+    display: flex;
+    flex-direction: column;
+
+    padding: .5rem 0;
+}
+
+.do {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+}
+
+hr { 
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent,#666, transparent);
+}
+
+@media (min-width: 1024px) {
+    .main-mid {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,57 @@
+.popMovies {
+    position: relative;
+    padding: 0 .5rem;
+}
+
+.popMovies:hover {
+    cursor: pointer;
+}
+
+.popMovies h4 {
+    font-size: 1.20rem;
+}
+
+.popMovies-text {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    z-index: 1;
+
+    padding: 0 .5rem;
+    color: var(--white);
+}
+
+.popMovies-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: .80rem;
+    font-weight: 300;
+    width: 90%;
+}
+
+.movie-img {
+    border-radius: 5px;
+    width: 100%;
+    opacity: 0.5;
+    transition: .2s;
+}
+
+.popMovies:hover > .movie-img {
+    opacity: .8;
+}
+
+@media (min-width: 560px) {
+
+    .popMovies-text {
+        top: 63%
+    }
+
+    .popMovies-text p {
+        font-size: .95rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .popMovies-text {
+        top: 58%;
+    }
+}

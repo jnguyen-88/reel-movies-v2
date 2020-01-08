@@ -7,6 +7,7 @@ import UserReviewBox from './UserReviewBox';
 import NowPlaying from './NowPlaying';
 import Upcoming from './Upcoming';
 import Footer from '../Footer';
+import './Landing.css';
 
 class Landing extends Component {
   render() {

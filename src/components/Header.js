@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from './Button';
+import './Header.css';
 
 class Header extends Component {
   render() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchNowPlayingMovies } from '../../actions';
-import Slick from './Slick';
+import Slick from '../slick/Slick';
 
 class NowPlaying extends Component {
   componentDidMount() {
