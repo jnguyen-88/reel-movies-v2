@@ -21,7 +21,7 @@ class NavBar extends Component {
           <li className='nav-item'>
             <a
               className='nav-link'
-              href='/reel-movies-v2'
+              href='/reel-movies-v2/login'
               tabIndex='-1'
               aria-disabled='true'
             >

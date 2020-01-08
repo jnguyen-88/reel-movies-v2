@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from './Button';
 import './Header.css';
@@ -16,7 +17,9 @@ class Header extends Component {
         <div className='hero'>
           <h1>Reel Movies</h1>
           <p>Browse and rate the latest and greatest movies.</p>
-          <Button text='Login' />
+          <Link to='/login'>
+            <Button text='Login' />
+          </Link>
         </div>
         <div className='carousel-inner'>
           {/* Slide 1 */}

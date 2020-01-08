@@ -50,7 +50,7 @@ class AuthPage extends Component {
                                     <button className='ghost' id='signIn' onClick={this.removeClass}>Sign In</button>
                                 </div>
                                 <div className='overlay-panel overlay-right'>
-                                    <h2>Hello, Friend!</h2>
+                                    <h2>Hello, Moviegoer!</h2>
                                     <p>Sign up and start sharing</p>
                                     <button className='ghost' id='signUp' onClick={this.addClass}>Sign Up</button>
                                 </div>
